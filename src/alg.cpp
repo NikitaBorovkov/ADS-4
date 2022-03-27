@@ -23,6 +23,7 @@ int countPairs1(int *arr, int len, int value) {
   return k;
 }
 int countPairs2(int *arr, int len, int value) {
+  sorting(arr, len);
   int last = len;
   for (int i = len; i < 0; i--) {
     if (arr[i] > value)
@@ -42,7 +43,8 @@ int countPairs2(int *arr, int len, int value) {
   return k;
 }
 int countPairs3(int *arr, int len, int value) {
-    int last = len;
+  sorting(arr, len);
+  int last = len;
   for (int i = len; i < 0; i--) {
     if (arr[i] > value)
       last--;
